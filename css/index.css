@@ -2,6 +2,25 @@
   margin: 0;
   padding: 0;
 }
+/* Layout fixo com navbar e rodapé */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar fixa no topo */
+header, nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px; /* ajuste conforme o tamanho real da navbar */
+    background: #fff; /* cor de fundo para evitar sobreposição */
+    z-index: 1000;
+}
 
 a {
   color: #fff;
@@ -33,6 +52,14 @@ main {
   background-size: cover;
   height: 83vh;
 }
+
+main {
+    flex: 1;
+    margin-top: 80px;   /* igual à altura do header/nav */
+    margin-bottom: 60px; /* igual à altura do footer */
+    overflow-y: auto;
+}
+
 footer {
 	position: flex;
 	z-index: 1;
